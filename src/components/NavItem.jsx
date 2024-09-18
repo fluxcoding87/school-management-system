@@ -15,8 +15,8 @@ export default function NavItem({ children, passedIcon, ...props }) {
         onClick={handleClick}
         className={({ isActive }) =>
           isActive
-            ? "flex items-center justify-start w-full gap-3 min-h-12 text-white font-semibold "
-            : "flex items-center justify-start w-full gap-3 min-h-12 text-gray-400 font-semibold hover:text-white"
+            ? "flex items-center justify-start w-full gap-3 min-h-12 text-white font-semibold"
+            : "flex items-center justify-start w-full gap-3 min-h-12 text-gray-400 font-semibold hover:text-white transition-all duration-[0.3s]"
         }
       >
         <span className="text-[2rem]">{passedIcon}</span>

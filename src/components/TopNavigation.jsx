@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import {
   MdSearch,
   MdCalendarMonth,
@@ -44,14 +43,35 @@ export default function TopNavigation() {
               placeholder="Find a menu option"
             />
           </div>
-          <NavLink>
-            <MdCalendarMonth className="text-white text-[1.8rem]" />
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-900 text-[1.8rem]"
+                : "text-white text-[1.8rem] "
+            }
+            to="/student/calender"
+          >
+            <MdCalendarMonth />
           </NavLink>
-          <NavLink>
-            <MdAppRegistration className="text-white text-[1.8rem]" />
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-900 text-[1.8rem]"
+                : "text-white text-[1.8rem] "
+            }
+            to="/student/appointment"
+          >
+            <MdAppRegistration />
           </NavLink>
-          <NavLink>
-            <MdPerson className="text-white text-[1.8rem]" />
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-900 text-[1.8rem]"
+                : "text-white text-[1.8rem] "
+            }
+            to="/student/settings"
+          >
+            <MdPerson />
           </NavLink>
         </div>
       </div>

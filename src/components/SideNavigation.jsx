@@ -16,9 +16,9 @@ export default function SideNavigation() {
   return (
     <>
       {showQuickLink && (
-        <aside className="absolute left-[16.2rem] z-10 bg-gradient-to-b from-[#000000be] to-neutral-800">
+        <aside className="absolute left-[16.2rem] z-10 bg-gradient-to-b from-[#000000be] to-neutral-800 ">
           <nav>
-            <ul>
+            <ul className="max-h-[30rem] overflow-y-scroll scrollbar-thin scrollbar-track-rounded-full">
               <li>
                 <NavItem passedIcon={<MdHome />} to="/timeline">
                   Home
@@ -61,10 +61,7 @@ export default function SideNavigation() {
                 </NavItem>
               </li>
               <li>
-                <NavItem
-                  passedIcon={<MdSettings />}
-                  to="/student/change-password"
-                >
+                <NavItem passedIcon={<MdSettings />} to="/student/settings">
                   Change Password
                 </NavItem>
               </li>
